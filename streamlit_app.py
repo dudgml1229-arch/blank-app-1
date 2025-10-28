@@ -111,3 +111,48 @@ if generate:
         file_name="aspect-ratio-results.zip",
         mime="application/zip",
     )
+# ===========================
+# 💅 Custom CSS Styling
+# ===========================
+st.markdown("""
+    <style>
+    @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/GmarketSansMedium.woff2');
+
+    html, body, [class*="css"] {
+        font-family: 'GmarketSansMedium', sans-serif;
+        background: linear-gradient(135deg, #0A0A2C 0%, #371C9C 100%);
+        color: #F2F0F4;
+    }
+
+    h1, h2, h3 {
+        color: #F2F0F4 !important;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .stButton>button {
+        background: linear-gradient(90deg, #581CA0, #371C9C);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 0.6em 1.2em;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .stButton>button:hover {
+        transform: scale(1.05);
+        background: linear-gradient(90deg, #6D28D9, #4338CA);
+        box-shadow: 0 0 15px #6D28D9;
+    }
+
+    .stFileUploader, .stCheckbox {
+        color: #E5E5F7 !important;
+    }
+
+    .css-18ni7ap {
+        background: rgba(255,255,255,0.1);
+        border-radius: 16px;
+        padding: 1em;
+    }
+    </style>
+""", unsafe_allow_html=True)
