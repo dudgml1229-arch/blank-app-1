@@ -7,6 +7,45 @@ from PIL import Image, ImageOps, ImageColor
 import streamlit as st
 st.markdown("""
 <style>
+/* 전체 배경/헤더 */
+.stApp { background:#0A0A2C !important; }
+[data-testid="stHeader"] { background: rgba(0,0,0,0) !important; }
+
+/* 제목/텍스트 색 */
+h1, h2, h3, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 { 
+  color:#FF61D6 !important;
+  text-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+p, label, .stMarkdown, .stText, .stCheckbox label, [data-testid="stMarkdownContainer"] {
+  color:#EDEAFB !important;
+}
+
+/* 버튼 */
+.stButton>button{
+  background:linear-gradient(90deg,#7B39FF,#581CA0);
+  color:#fff; border:none; border-radius:14px;
+  padding:.6rem 1rem; font-weight:700;
+  box-shadow:0 0 0 rgba(0,0,0,0); transition:.2s ease;
+}
+.stButton>button:hover{
+  transform:scale(1.04);
+  box-shadow:0 10px 24px rgba(123,57,255,.35);
+}
+
+/* 파일 업로더 */
+.stFileUploader { 
+  border:2px dashed rgba(255,255,255,.25);
+  border-radius:16px; padding:1rem;
+  background:rgba(255,255,255,.06);
+}
+
+/* 체크박스 포커스 색 */
+input[type="checkbox"]{ accent-color:#C4B5FD; }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
 html, body { background:#0A0A2C !important; }
 h1 { color:#FF61D6 !important; text-shadow:0 2px 8px rgba(0,0,0,.25) !important; }
 .stButton>button{
